@@ -65,7 +65,6 @@ window.addEventListener("scroll", function () {
   // console.log("window.scrollY", window.scrollY);
 });
 
-
 //send Email
 const form = document.getElementById("my-form");
 form.addEventListener("submit", function (e) {
@@ -76,26 +75,21 @@ form.addEventListener("submit", function (e) {
   const selectAnOption = form.elements["select-an-option"].value;
   const messageInput = form.elements["message-input"].value;
 
-  const data = {
-    name: nameInput,
-    email: emailAddress,
+  const templateParams = {
+    to_name: "Artemis",
+    from_name: nameInput,
     subject: subject,
-    selectAnOption: selectAnOption,
-    messageInput: messageInput,
+    message: `${messageInput}, please reply me via ${emailAddress}`,
   };
-  console.log(data);
-});
 
-// const templateParams = {
-//   to_name: "Artemis",
-//   from_name: "",
-//   message: "",
-// };
-// emailjs.send("Outlook", "template_artemis_website", templateParams).then(
-//   function (response) {
-//     console.log("Success!");
-//   },
-//   function (error) {
-//     console.log("Failed");
-//   }
-// );
+  emailjs
+    .send("service_lnadkjc", "template_artemis_website", templateParams)
+    .then(
+      function (response) {
+        console.log("Success!");
+      },
+      function (error) {
+        console.log(error);
+      }
+    );
+});
