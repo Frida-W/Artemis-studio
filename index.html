@@ -18,20 +18,40 @@
   </head>
   <body>
     <main class="body-inner">
+
       <!-- nav bar-->
       <div class="nav">
         <div class="nav-container">
+
           <div class="nav-logo">
             <img src="./src/logo-light.png" alt="logo" />
           </div>
-          <div class="nav-menu">
-            <a href="">
-              <span>Menu</span>
 
-              <i class="fa-solid fa-bars-staggered"></i>
-            </a>
+          <button id="menu-button">
+            Menu
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+          
+          <div id="side-menu">
+            <button id="close-btn">Close</button>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Works</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
           </div>
+
         </div>
+        <div id="side-menu">
+            <button id="close-btn">Close</button>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Works</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
       </div>
       <!-- end of nav bar-->
 
@@ -311,22 +331,13 @@
           </ul>
         </div>
       </footer>
-
-      <!-- <div class="menu">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Works</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div> -->
     </main>
 
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    
+
     <script type="text/javascript">
       (function () {
         emailjs.init("tkUCr6JjuhQmh8yRo");

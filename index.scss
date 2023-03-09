@@ -40,7 +40,7 @@ body {
 /****************************nav-bar***************************/
 
 .nav {
-  // border: 1px solid blue;
+//   border: 1px solid blue;
   position: fixed;
   top: 0;
   left: 0;
@@ -64,20 +64,59 @@ body {
   height: 53px;
 }
 
-.nav-menu {
-  width: 100px;
+#side-menu {
+  position: fixed;
+  bottom: -100%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+  color: $text-grey;
+  transition: all 0.3s ease-in-out;
+  z-index: 101;
+  text-align: center;
+  font-size: 40px;
+  ul {
+    padding-top: 100px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $text-grey;
+  }
+}
+#side-menu.open {
+  bottom: 0;
+  right: 0;
 }
 
-.nav-menu a {
-  color: $text-color;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nav-menu span {
+#menu-button {
+  position: fixed;
+  background: none;
+  border: none;
+  top: 40px;
+  right: 50px;
+  z-index: 100;
+  color: $text-grey;
   font-size: 18px;
 }
+
+#close-btn {
+  z-index: 200;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  z-index: 100;
+  color: $text-grey;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 /************************** end of nav-bar ************************* /
 
 /***************************** Section 1 **************************/
@@ -197,13 +236,12 @@ body {
   //   border: 1px solid red;
   position: absolute;
   left: 6rem;
-  bottom: -4rem;
-  &.animate{
+  bottom: -2rem;
+  &.animate {
     animation: slide-out 1s ease-in-out forwards;
   }
   @media (max-width: 1000px) {
     animation: slide-out 1s ease-in-out forwards;
-      
   }
   .link__svg {
     width: 100%;
@@ -324,18 +362,6 @@ body {
     max-width: 100%;
   }
 }
-
-// @media (max-width: 1024px) {
-//   .works-wrapper {
-//     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   .works-wrapper {
-//     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-//   }
-// }
 
 .work-image::before {
   position: absolute;

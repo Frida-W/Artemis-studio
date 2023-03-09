@@ -1,5 +1,3 @@
-// emailjs.init("tkUCr6JjuhQmh8yRo")
-
 //collapsible service info//
 const coll = document.getElementsByClassName("service-collapsible");
 let i;
@@ -72,7 +70,7 @@ form.addEventListener("submit", function (e) {
   const nameInput = form.elements["name-input"].value;
   const emailAddress = form.elements["email-address"].value;
   const subject = form.elements["subject-input"].value;
-  const selectAnOption = form.elements["select-an-option"].value;
+  //   const selectAnOption = form.elements["select-an-option"].value;
   const messageInput = form.elements["message-input"].value;
 
   const templateParams = {
@@ -92,4 +90,20 @@ form.addEventListener("submit", function (e) {
         console.log(error);
       }
     );
+});
+
+
+// side menu
+
+const menuButton = document.querySelector('#menu-button');
+const sideMenu = document.querySelector('#side-menu');
+const closeBtn = document.querySelector('#close-btn');
+
+menuButton.addEventListener('click', () => {
+  sideMenu.classList.toggle('open');
+  mainContent.classList.toggle('open');
+});
+
+closeBtn.addEventListener('click', function() {
+  sideMenu.classList.remove('open');
 });
