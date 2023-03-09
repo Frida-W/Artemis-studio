@@ -12,14 +12,12 @@
       src="https://kit.fontawesome.com/8d639dc97c.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- <script src="./script.js"></script> -->
     <link rel="stylesheet" href="./index.css" />
     <title>Artemis profile</title>
   </head>
   <body>
-
     <main class="body-inner">
-
       <!-- nav bar-->
       <div class="nav">
         <div class="nav-container">
@@ -29,7 +27,7 @@
           <div class="nav-menu">
             <a href="">
               <span>Menu</span>
-            
+
               <i class="fa-solid fa-bars-staggered"></i>
             </a>
           </div>
@@ -51,7 +49,11 @@
             </h2>
           </div>
           <div class="hero-image-container">
-            <img src="./src/hero image.png" alt="artimis artwork" class="hero-image" />
+            <img
+              src="./src/hero image.png"
+              alt="artimis artwork"
+              class="hero-image"
+            />
           </div>
         </div>
 
@@ -59,12 +61,41 @@
           <p>Made With</p>
           <i class="fa-regular fa-heart"></i>
         </div>
+
+        <div id="text-circle">
+          <svg
+            viewBox="0 0 200 200"
+            width="200"
+            height="200"
+            xmlns="http://www.w3.org/2000/svg"
+            class="link__svg"
+            aria-labelledby="link1-title link1-desc"
+          >
+            <path
+              id="link-circle"
+              class="link__path"
+              d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+              stroke="none"
+              fill="none"
+            />
+            <path
+              class="link__arrow"
+              d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115"
+              fill="none"
+            />
+
+            <text class="link__text">
+              <textPath href="#link-circle" stroke="none">
+                SCROLLDOWN·SCROLLDOWN
+              </textPath>
+            </text>
+          </svg>
+        </div>
       </section>
       <!-- end of section 1-->
 
       <!-- section 2 -->
       <section class="works-section">
-
         <div class="works-section-heading">
           <h3>Latest Projects</h3>
           <h2>Works</h2>
@@ -114,13 +145,11 @@
             </div>
           </div>
         </div>
-
       </section>
       <!-- end of section 2-->
 
       <!-- section 3 -->
       <section class="services-section">
-
         <div class="services-section-heading">
           <h3>What I Do</h3>
           <h2>Services</h2>
@@ -175,15 +204,12 @@
             </div>
           </div>
         </div>
-
       </section>
       <!-- end of section 3-->
 
       <!-- section 4 -->
       <section class="quotes-section">
-
         <div class="quotes-container">
-
           <div class="quote-slide">
             <p>
               "Always great working with Artemis! Have worked with her multiple
@@ -218,15 +244,12 @@
           <span class="dot"></span>
           <span class="dot"></span>
         </div>
-
       </section>
       <!-- end of section 4-->
 
       <!-- section 5 -->
       <section class="contacts-section">
-
         <div class="contacts-wrapper">
-
           <div class="contacts-section-heading">
             <span>Get in touch</span>
             <h2>
@@ -236,7 +259,7 @@
             </h2>
           </div>
 
-          <form action="">
+          <form id="my-form" action="">
             <div class="form name">
               <label for="name-input">Name</label>
               <input type="text" class="name-input" id="name-input" />
@@ -267,12 +290,10 @@
               <label for="message-input">Message</label>
               <input type="text" class="message-input" id="message-input" />
             </div>
+            <p><em>Fields marked with an asterisk (*) are required!</em></p>
+            <button type="submit" class="send-message-btn">Send Message</button>
           </form>
-          
-          <p><em>Fields marked with an asterisk (*) are required!</em></p>
-          <button class="send-message-btn">Send Message</button>
         </div>
-
       </section>
       <!-- end of section 5-->
 
@@ -301,10 +322,16 @@
       </div> -->
     </main>
 
+    <!-- <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("tkUCr6JjuhQmh8yRo");
+      })();
+    </script> -->
     <script src="./script.js"></script>
   </body>
 </html>
-
-<!--modal display:none display:block-->
-<!-- <div><img/><div>  div固定长款,然后container overflow:hidden；grid-->
-<!--photo gallery-->

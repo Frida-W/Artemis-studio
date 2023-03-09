@@ -5,5 +5,9 @@
   },
   "scripts": {
     "dev": "vite"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "lottie-web": "^5.10.2"
   }
 }
