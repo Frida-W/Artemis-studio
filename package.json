@@ -1,14 +1,18 @@
 {
   "devDependencies": {
+    "jest": "^29.5.0",
+    "jsdom": "^21.1.0",
     "sass": "^1.58.3",
     "vite": "^4.1.4"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "jest"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
-    "lottie-web": "^5.10.2"
+    "lottie-web": "^5.10.2",
+    "scrollreveal": "^4.0.9"
   }
 }

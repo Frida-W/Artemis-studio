@@ -1,3 +1,30 @@
+// create ScrollReveal instance
+// const sr = ScrollReveal({
+//   duration: 1000,
+//   easing: 'ease-in-out',
+//   distance: '20px',
+//   mobile: false,
+//   viewFactor: 0.5,
+// });
+const animatedElements = document.querySelectorAll('.animated');
+window.addEventListener('scroll', function() {
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    const elementPosition = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (elementPosition < windowHeight * 0.6) {
+      element.classList.add('show');
+    }
+  }
+});
+
+//works section
+const works = document.querySelectorAll(".work");
+works.forEach(function(work){
+  work.style.cursor = "pointer";
+})
+
+
 //collapsible service info//
 const coll = document.getElementsByClassName("service-collapsible");
 let i;
@@ -60,7 +87,6 @@ window.addEventListener("scroll", function () {
   } else {
     textCircle.classList.remove("animate");
   }
-  // console.log("window.scrollY", window.scrollY);
 });
 
 //send Email
@@ -94,7 +120,6 @@ form.addEventListener("submit", function (e) {
 
 
 // side menu
-
 const menuButton = document.querySelector('#menu-button');
 const sideMenu = document.querySelector('#side-menu');
 const closeBtn = document.querySelector('#close-btn');
