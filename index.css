@@ -31,6 +31,21 @@ body {
   min-height: 100vh;
 }
 
+/***************************** mouse-circle **************************/
+.mouse-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  opacity: 1;
+  transition: all 0.1s ease-in-out;
+  pointer-events: none;
+}
+
 /****************************nav-bar***************************/
 .nav {
   position: fixed;
@@ -164,7 +179,6 @@ body {
     margin-right: 0;
   }
 }
-
 .hero-image-container img {
   max-width: 100%;
   width: 100%;

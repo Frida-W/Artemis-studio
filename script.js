@@ -1,31 +1,67 @@
-// create ScrollReveal instance
-// const sr = ScrollReveal({
-//   duration: 1000,
-//   easing: 'ease-in-out',
-//   distance: '20px',
-//   mobile: false,
-//   viewFactor: 0.5,
+import { gsap } from "gsap";
+
+//===============Mouse Circle=================//
+// const mouseCircle = document.querySelector('.mouse-circle');
+// window.addEventListener('mousemove', function(event) {
+//   mouseCircle.style.left = `${event.clientX - 2}px`;
+//   mouseCircle.style.top = `${event.clientY - 2}px`;
 // });
-const animatedElements = document.querySelectorAll('.animated');
-window.addEventListener('scroll', function() {
-  for (let i = 0; i < elements.length; i++) {
-    const element = elements[i];
-    const elementPosition = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (elementPosition < windowHeight * 0.6) {
-      element.classList.add('show');
-    }
-  }
+
+// var circle = document.querySelector('.mouse-circle');
+// function moveCircle(e) {
+//   gsap.to(circle, {
+//     duration: 0.3,
+//     x: e.pageX,
+//     y: e.pageYs
+//   });
+// }
+
+// window.addEventListener('mousemove', moveCircle);
+
+// var circle = $('.mouse-circle');
+// function moveCircle(e) {
+//   gsap.to(circle, {
+//     duration: 0.3,
+//     x: e.pageX,
+//     y: e.pageY
+//   });
+// }
+
+// $(window).on('mousemove', moveCircle);
+
+
+gsap.set(".mouse-circle", {xPercent: -50, yPercent: -50});
+
+let xTo = gsap.quickTo(".mouse-circle", "x", {duration: 0.6, ease: "power3"}),
+    yTo = gsap.quickTo(".mouse-circle", "y", {duration: 0.6, ease: "power3"});
+
+window.addEventListener("mousemove", e => {
+  // xTo(e.pageX);
+  // yTo(e.pageY);
+  xTo(e.clientX);
+  yTo(e.clientY);
+});
+
+
+//================ScrollReveal=================//
+const sr = ScrollReveal({
+  duration: 2000, //动画时长
+  distance: '50px', //移动距离
+  easing: 'ease-in-out', //缓动函数
+  origin: 'bottom', //元素起始位置
+});
+
+sr.reveal(".animated",{
+  interval: 200,
 });
 
 //works section
 const works = document.querySelectorAll(".work");
-works.forEach(function(work){
+works.forEach(function (work) {
   work.style.cursor = "pointer";
-})
+});
 
-
-//collapsible service info//
+//===========collapsible service info===================//
 const coll = document.getElementsByClassName("service-collapsible");
 let i;
 
@@ -118,17 +154,16 @@ form.addEventListener("submit", function (e) {
     );
 });
 
-
 // side menu
-const menuButton = document.querySelector('#menu-button');
-const sideMenu = document.querySelector('#side-menu');
-const closeBtn = document.querySelector('#close-btn');
+const menuButton = document.querySelector("#menu-button");
+const sideMenu = document.querySelector("#side-menu");
+const closeBtn = document.querySelector("#close-btn");
 
-menuButton.addEventListener('click', () => {
-  sideMenu.classList.toggle('open');
-  mainContent.classList.toggle('open');
+menuButton.addEventListener("click", () => {
+  sideMenu.classList.toggle("open");
+  mainContent.classList.toggle("open");
 });
 
-closeBtn.addEventListener('click', function() {
-  sideMenu.classList.remove('open');
+closeBtn.addEventListener("click", function () {
+  sideMenu.classList.remove("open");
 });

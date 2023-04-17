@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "gsap": "^3.11.5",
+    "jquery": "^3.6.4",
     "lottie-web": "^5.10.2",
+    "matter-js": "^0.19.0",
     "scrollreveal": "^4.0.9"
   }
 }

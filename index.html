@@ -12,16 +12,23 @@
       src="https://kit.fontawesome.com/8d639dc97c.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="./script.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./index.css" />
     <title>Frida profile</title>
   </head>
   <body>
     <main class="body-inner">
+      <div class="mouse-circle">
+        <!-- <svg width="40" height="40">
+          <circle cx="20" cy="20" r="20" fill="#ffffff"></circle>
+        </svg> -->
+      </div>
 
       <!-- nav bar-->
       <div class="nav">
-        <div class="nav-container">
+        <div class="nav-container ">
 
           <div class="nav-logo">
             <img src="./src/logo-light.png" alt="logo" />
@@ -60,9 +67,9 @@
       <!-- section 1 -->
       <section class="hero-section">
         <div class="hero-container">
-          <div class="hero-title">
+          <div class="hero-title animated">
             <h2>
-              <div class="title-content">
+              <div class="title-content" >
                 <em>Hello stranger!</em>
                 <br />
                 I am Frida, a creative developer based in Sydney. I bring your
@@ -70,11 +77,11 @@
               </div>
             </h2>
           </div>
-          <div class="hero-image-container">
+          <div class="hero-image-container" >
             <img
               src="./src/hero image.png"
-              alt="artimis artwork"
-              class="hero-image"
+              alt="frida"
+              class="hero-image animated"
             />
           </div>
         </div>
@@ -118,7 +125,7 @@
 
       <!-- section 2 -->
       <section class="works-section" id="works-section">
-        <div class="works-section-heading">
+        <div class="works-section-heading animated">
           <h3>Latest Projects</h3>
           <h2>Works</h2>
           <div class="see-all-works">
@@ -133,7 +140,6 @@
               <div class="work-type">Oil Painting</div>
             </div>
             <div class="work-image">
-              <!-- <img src="./src/portfolio 1-croped.png" alt="" /> -->
               <img src="./src/1.webp" alt="" />
             </div>
           </div>
@@ -144,7 +150,6 @@
               <div class="work-type">Murals</div>
             </div>
             <div class="work-image">
-              <!-- <img src="./src/portfolio 2.jpg" alt="" /> -->
               <img src="./src/2.webp" alt="" />
             </div>
           </div>
@@ -155,7 +160,6 @@
               <div class="work-type">Tattoo</div>
             </div>
             <div class="work-image">
-              <!-- <img src="./src/portfolio3.jpg" alt="" /> -->
               <img src="./src/3.webp" alt="" />
             </div>
           </div>
@@ -166,7 +170,6 @@
               <div class="work-type">key animation</div>
             </div>
             <div class="work-image">
-              <!-- <img src="./src/portfolio 4.jpg" alt="" /> -->
               <img src="./src/4.webp" alt="" />
             </div>
           </div>
@@ -176,13 +179,13 @@
 
       <!-- section 3 -->
       <section class="services-section">
-        <div class="services-section-heading">
+        <div class="services-section-heading animated">
           <h3>What I Do</h3>
           <h2>Services</h2>
         </div>
 
         <div class="services-wrapper">
-          <div class="service">
+          <div class="service animated">
             <button class="service-collapsible">
               <h3>Tattoo design</h3>
               <p>Tattoo design</p>
@@ -199,7 +202,7 @@
             </div>
           </div>
 
-          <div class="service">
+          <div class="service animated">
             <button class="service-collapsible">
               <h3>Portrait painting</h3>
               <p>Portrait painting</p>
@@ -215,7 +218,7 @@
             </div>
           </div>
 
-          <div class="service">
+          <div class="service animated">
             <button class="service-collapsible">
               <h3>Murals</h3>
               <p>Murals</p>
@@ -234,7 +237,7 @@
       <!-- end of section 3-->
 
       <!-- section 4 -->
-      <section class="quotes-section">
+      <section class="quotes-section animated">
         <div class="quotes-container">
           <div class="quote-slide">
             <p>
@@ -276,7 +279,7 @@
       <!-- section 5 -->
       <section class="contacts-section">
         <div class="contacts-wrapper">
-          <div class="contacts-section-heading">
+          <div class="contacts-section-heading animated">
             <span>Get in touch</span>
             <h2>
               Drop Me
@@ -286,22 +289,22 @@
           </div>
 
           <form id="my-form" action="">
-            <div class="form name">
+            <div class="form name animated">
               <label for="name-input">Name</label>
               <input type="text" class="name-input" id="name-input" />
             </div>
 
-            <div class="form email">
+            <div class="form email animated">
               <label for="email-address">Email Address</label>
               <input type="text" class="email-address" id="email-address" />
             </div>
 
-            <div class="form subject">
+            <div class="form subject animated">
               <label for="subject-input">Subject</label>
               <input type="text" class="subject-input" id="subject-input" />
             </div>
 
-            <div class="form select">
+            <div class="form select animated">
               <label for="select-an-option">Select an option</label>
               <select name="" id="select-an-option">
                 <option value="0">Please select an option</option>
@@ -312,22 +315,22 @@
               </select>
             </div>
 
-            <div class="form message">
+            <div class="form message animated">
               <label for="message-input">Message</label>
               <input type="text" class="message-input" id="message-input" />
             </div>
-            <p><em>Fields marked with an asterisk (*) are required!</em></p>
-            <button type="submit" class="send-message-btn">Send Message</button>
+            <p class="animated"><em>Fields marked with an asterisk (*) are required!</em></p>
+            <button type="submit" class="send-message-btn animated">Send Message</button>
           </form>
         </div>
       </section>
       <!-- end of section 5-->
 
       <footer>
-        <div class="back-to-top">
+        <div class="back-to-top animated">
           <a href="">Back to top</a>
         </div>
-        <div class="social">
+        <div class="social animated">
           <ul>
             <li>Fb.</li>
             <li>Tw.</li>
@@ -350,6 +353,6 @@
       })();
     </script>
     <script src="./script.js"></script>
-    <!-- <script src="path/to/scrollreveal.min.js"></script> -->
+   
   </body>
 </html>
