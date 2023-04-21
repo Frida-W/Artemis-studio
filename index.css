@@ -20,7 +20,7 @@
 
 body {
   font-weight: 400;
-  background: #0a0a0a;
+  background-color: #0a0a0a;
   color: #ffffff;
 }
 
@@ -29,6 +29,21 @@ body {
   overflow: hidden;
   height: 100%;
   min-height: 100vh;
+}
+
+/***************************** dark-scroll-bar **************************/
+::-webkit-scrollbar {
+  width: 8px;
+  z-index: 99999;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(185, 185, 185, 0.35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 185, 185, 0.55);
 }
 
 /***************************** mouse-circle **************************/
@@ -41,9 +56,8 @@ body {
   border-radius: 50%;
   border: 1px solid #fff;
   background-color: transparent;
-  opacity: 1;
-  transition: all 0.1s ease-in-out;
   pointer-events: none;
+  z-index: 4;
 }
 
 /****************************nav-bar***************************/
@@ -69,8 +83,50 @@ body {
   }
 }
 
+.nav-logo {
+  height: 30px;
+}
 .nav-logo img {
-  height: 53px;
+  height: 100%;
+}
+
+.menu-toggle-wrapper {
+  display: relative;
+  z-index: 100;
+}
+
+#menu-button {
+  border: 1px solid red;
+  position: absolute;
+  background: none;
+  border: none;
+  top: 40px;
+  right: 70px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.toggle-icon {
+  right: 55px;
+  top: 58px;
+  position: absolute;
+}
+.toggle-icon::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 25px;
+  bottom: 7px;
+  background-color: #FFF;
+}
+.toggle-icon:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 15px;
+  background-color: #FFF;
 }
 
 #side-menu {
@@ -100,17 +156,6 @@ body {
 #side-menu.open {
   bottom: 0;
   right: 0;
-}
-
-#menu-button {
-  position: fixed;
-  background: none;
-  border: none;
-  top: 40px;
-  right: 50px;
-  z-index: 100;
-  color: #b9b9b9;
-  font-size: 18px;
 }
 
 #close-btn {

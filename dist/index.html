@@ -12,27 +12,37 @@
       src="https://kit.fontawesome.com/8d639dc97c.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="./script.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     
-    <title>Artemis profile</title>
-    <link rel="stylesheet" href="/assets/index-67aed40a.css">
+    <title>Frida profile</title>
+    <link rel="stylesheet" href="/assets/index-8e95040f.css">
   </head>
   <body>
     <main class="body-inner">
+      <div class="mouse-circle"> </div>
 
       <!-- nav bar-->
       <div class="nav">
         <div class="nav-container">
-
           <div class="nav-logo">
             <img src="data:image/png;base64,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" alt="logo" />
           </div>
 
-          <button id="menu-button">
-            Menu
-            <i class="fa-solid fa-bars-staggered"></i>
-          </button>
-          
+          <div class="menu-toggle-wrapper">
+            <button id="menu-button">
+              <span>
+                Menu
+              </span>
+              <!-- <i class="fa-solid fa-bars-staggered"></i> -->
+            </button>
+            <div class="toggle-icon magnetic">
+              <!-- <span class="toggle-icon"></span> -->
+            </div>
+          </div>
+         
+
           <div id="side-menu">
             <button id="close-btn">Close</button>
             <ul>
@@ -42,31 +52,29 @@
               <li><a href="">Contact</a></li>
             </ul>
           </div>
-
         </div>
 
         <div id="side-menu">
-            <button id="close-btn">Close</button>
-            <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="#works-section">Works</a></li>
-              <li><a href="">Services</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
-          </div>
-
+          <button id="close-btn">Close</button>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Works</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
       </div>
       <!-- end of nav bar-->
 
       <!-- section 1 -->
       <section class="hero-section">
         <div class="hero-container">
-          <div class="hero-title">
+          <div class="hero-title animated">
             <h2>
               <div class="title-content">
                 <em>Hello stranger!</em>
                 <br />
-                I am Artemis, a freelance artist based in Sydney. I bring your
+                I am Frida, a creative developer based in Sydney. I bring your
                 <em> <u>ideas</u> </em> to life.
               </div>
             </h2>
@@ -74,15 +82,14 @@
           <div class="hero-image-container">
             <img
               src="/assets/hero image-18005830.png"
-              alt="artimis artwork"
-              class="hero-image"
+              alt="frida"
+              class="hero-image animated"
             />
           </div>
         </div>
 
         <div class="made-with-love">
-          <p>Made With</p>
-          <i class="fa-regular fa-heart"></i>
+          <p>Made With Love</p>
         </div>
 
         <div id="text-circle">
@@ -119,7 +126,7 @@
 
       <!-- section 2 -->
       <section class="works-section" id="works-section">
-        <div class="works-section-heading">
+        <div class="works-section-heading animated">
           <h3>Latest Projects</h3>
           <h2>Works</h2>
           <div class="see-all-works">
@@ -128,43 +135,43 @@
         </div>
 
         <div class="works-wrapper">
-          <div class="work">
+          <div class="work animated">
             <div class="work-info">
               <h2 class="work-name">Oil Painting</h2>
               <div class="work-type">Oil Painting</div>
             </div>
             <div class="work-image">
-              <img src="/assets/portfolio 1-croped-a59e55a1.png" alt="" />
+              <img src="/assets/1-d501acb2.webp" alt="" />
             </div>
           </div>
 
-          <div class="work">
+          <div class="work animated">
             <div class="work-info">
               <h2 class="work-name">Murals</h2>
               <div class="work-type">Murals</div>
             </div>
             <div class="work-image">
-              <img src="/assets/portfolio 2-bc1557b0.jpg" alt="" />
+              <img src="/assets/2-863c8045.webp" alt="" />
             </div>
           </div>
 
-          <div class="work">
+          <div class="work animated">
             <div class="work-info">
               <h2 class="work-name">Tattoo</h2>
               <div class="work-type">Tattoo</div>
             </div>
             <div class="work-image">
-              <img src="/assets/portfolio3-2d9a36d4.jpg" alt="" />
+              <img src="/assets/3-eb6eae35.webp" alt="" />
             </div>
           </div>
 
-          <div class="work">
+          <div class="work animated">
             <div class="work-info">
               <h2 class="work-name">key animation</h2>
               <div class="work-type">key animation</div>
             </div>
             <div class="work-image">
-              <img src="/assets/portfolio 4-d4e11522.jpg" alt="" />
+              <img src="/assets/4-6247f11f.webp" alt="" />
             </div>
           </div>
         </div>
@@ -173,13 +180,13 @@
 
       <!-- section 3 -->
       <section class="services-section">
-        <div class="services-section-heading">
+        <div class="services-section-heading animated">
           <h3>What I Do</h3>
           <h2>Services</h2>
         </div>
 
         <div class="services-wrapper">
-          <div class="service">
+          <div class="service animated">
             <button class="service-collapsible">
               <h3>Tattoo design</h3>
               <p>Tattoo design</p>
@@ -196,7 +203,7 @@
             </div>
           </div>
 
-          <div class="service">
+          <div class="service animated">
             <button class="service-collapsible">
               <h3>Portrait painting</h3>
               <p>Portrait painting</p>
@@ -212,7 +219,7 @@
             </div>
           </div>
 
-          <div class="service">
+          <div class="service animated">
             <button class="service-collapsible">
               <h3>Murals</h3>
               <p>Murals</p>
@@ -231,7 +238,7 @@
       <!-- end of section 3-->
 
       <!-- section 4 -->
-      <section class="quotes-section">
+      <section class="quotes-section animated">
         <div class="quotes-container">
           <div class="quote-slide">
             <p>
@@ -273,7 +280,7 @@
       <!-- section 5 -->
       <section class="contacts-section">
         <div class="contacts-wrapper">
-          <div class="contacts-section-heading">
+          <div class="contacts-section-heading animated">
             <span>Get in touch</span>
             <h2>
               Drop Me
@@ -283,22 +290,22 @@
           </div>
 
           <form id="my-form" action="">
-            <div class="form name">
+            <div class="form name animated">
               <label for="name-input">Name</label>
               <input type="text" class="name-input" id="name-input" />
             </div>
 
-            <div class="form email">
+            <div class="form email animated">
               <label for="email-address">Email Address</label>
               <input type="text" class="email-address" id="email-address" />
             </div>
 
-            <div class="form subject">
+            <div class="form subject animated">
               <label for="subject-input">Subject</label>
               <input type="text" class="subject-input" id="subject-input" />
             </div>
 
-            <div class="form select">
+            <div class="form select animated">
               <label for="select-an-option">Select an option</label>
               <select name="" id="select-an-option">
                 <option value="0">Please select an option</option>
@@ -309,22 +316,26 @@
               </select>
             </div>
 
-            <div class="form message">
+            <div class="form message animated">
               <label for="message-input">Message</label>
               <input type="text" class="message-input" id="message-input" />
             </div>
-            <p><em>Fields marked with an asterisk (*) are required!</em></p>
-            <button type="submit" class="send-message-btn">Send Message</button>
+            <p class="animated">
+              <em>Fields marked with an asterisk (*) are required!</em>
+            </p>
+            <button type="submit" class="send-message-btn animated">
+              Send Message
+            </button>
           </form>
         </div>
       </section>
       <!-- end of section 5-->
 
       <footer>
-        <div class="back-to-top">
+        <div class="back-to-top animated">
           <a href="">Back to top</a>
         </div>
-        <div class="social">
+        <div class="social animated">
           <ul>
             <li>Fb.</li>
             <li>Tw.</li>
@@ -346,6 +357,7 @@
         emailjs.init("tkUCr6JjuhQmh8yRo");
       })();
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
   </body>
 </html>

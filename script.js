@@ -1,35 +1,6 @@
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 
 //===============Mouse Circle=================//
-// const mouseCircle = document.querySelector('.mouse-circle');
-// window.addEventListener('mousemove', function(event) {
-//   mouseCircle.style.left = `${event.clientX - 2}px`;
-//   mouseCircle.style.top = `${event.clientY - 2}px`;
-// });
-
-// var circle = document.querySelector('.mouse-circle');
-// function moveCircle(e) {
-//   gsap.to(circle, {
-//     duration: 0.3,
-//     x: e.pageX,
-//     y: e.pageYs
-//   });
-// }
-
-// window.addEventListener('mousemove', moveCircle);
-
-// var circle = $('.mouse-circle');
-// function moveCircle(e) {
-//   gsap.to(circle, {
-//     duration: 0.3,
-//     x: e.pageX,
-//     y: e.pageY
-//   });
-// }
-
-// $(window).on('mousemove', moveCircle);
-
-
 gsap.set(".mouse-circle", {xPercent: -50, yPercent: -50});
 
 let xTo = gsap.quickTo(".mouse-circle", "x", {duration: 0.6, ease: "power3"}),
@@ -42,6 +13,70 @@ window.addEventListener("mousemove", e => {
   yTo(e.clientY);
 });
 
+const box = document.querySelector('.magnetic');
+
+const enlargeCircle = () => {
+  gsap.to(circle, {duration: 0.3, scale: 2});
+}
+
+const shrinkCircle = () => {
+  gsap.to(circle, {duration: 0.3, scale: 1});
+}
+
+const moveCircle = (e) => {
+  gsap.to(circle, {duration: 0.3, x: e.clientX, y: e.clientY});
+  if (e.target === box) {
+    enlargeCircle();
+  } else {
+    shrinkCircle();
+  }
+}
+
+box.addEventListener('mouseenter', enlargeCircle);
+box.addEventListener('mouseleave', shrinkCircle);
+
+// gsap.set(".mouse-circle", {xPercent: -50, yPercent: -50, scale: 1});
+
+// let xTo = gsap.quickTo(".mouse-circle", "x", {duration: 0.6, ease: "power3"}),
+//     yTo = gsap.quickTo(".mouse-circle", "y", {duration: 0.6, ease: "power3"}),
+//     scaleTo = gsap.quickTo(".mouse-circle", {scale: 2, duration: 0.2, ease: "power3.inOut"});
+
+// const elements = document.querySelectorAll('.magnetic');
+// elements.forEach((el) => {
+//   el.addEventListener("mouseover", (e) => {
+//     gsap.to(".mouse-circle", {scale: 3, duration: 0.3, ease: "power3.inOut"});
+//   });
+//   el.addEventListener("mouseout", (e) => {
+//     gsap.to(".mouse-circle", {scale: 2, duration: 0.3, ease: "power3.inOut"});
+//   });
+//   el.addEventListener("mousemove", (e) => {
+//     let rect = e.target.getBoundingClientRect();
+//     let elementX = rect.left + rect.width / 2;
+//     let elementY = rect.top + rect.height / 2;
+//     let distanceX = elementX - e.clientX;
+//     let distanceY = elementY - e.clientY;
+//     let distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+//     if (distance < 100) {
+//       xTo(elementX);
+//       yTo(elementY);
+//       scaleTo.play();
+//     }
+//   });
+// });
+
+// window.addEventListener("mousemove", e => {
+//   let rect = e.target.getBoundingClientRect();
+//   let elementX = rect.left + rect.width / 2;
+//   let elementY = rect.top + rect.height / 2;
+//   let distanceX = elementX - e.clientX;
+//   let distanceY = elementY - e.clientY;
+//   let distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+//   if (distance >= 100) {
+//     xTo(e.clientX);
+//     yTo(e.clientY);
+//     scaleTo.reverse();
+//   }
+// });
 
 //================ScrollReveal=================//
 const sr = ScrollReveal({
