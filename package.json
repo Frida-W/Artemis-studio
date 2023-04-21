@@ -3,6 +3,7 @@
     "jest": "^29.5.0",
     "jsdom": "^21.1.0",
     "sass": "^1.58.3",
+    "scrollreveal": "^4.0.9",
     "vite": "^4.1.4"
   },
   "scripts": {
@@ -16,7 +17,6 @@
     "gsap": "^3.11.5",
     "jquery": "^3.6.4",
     "lottie-web": "^5.10.2",
-    "matter-js": "^0.19.0",
-    "scrollreveal": "^4.0.9"
+    "matter-js": "^0.19.0"
   }
 }
