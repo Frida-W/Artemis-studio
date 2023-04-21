@@ -1,4 +1,3 @@
-// import { gsap } from "gsap";
 
 //===============Mouse Circle=================//
 gsap.set(".mouse-circle", {xPercent: -50, yPercent: -50});
