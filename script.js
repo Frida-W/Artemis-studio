@@ -1,38 +1,37 @@
-
 //===============Mouse Circle=================//
-gsap.set(".mouse-circle", {xPercent: -50, yPercent: -50});
+gsap.set(".mouse-circle", { xPercent: -50, yPercent: -50 });
 
-let xTo = gsap.quickTo(".mouse-circle", "x", {duration: 0.6, ease: "power3"}),
-    yTo = gsap.quickTo(".mouse-circle", "y", {duration: 0.6, ease: "power3"});
+let xTo = gsap.quickTo(".mouse-circle", "x", { duration: 0.6, ease: "power3" }),
+  yTo = gsap.quickTo(".mouse-circle", "y", { duration: 0.6, ease: "power3" });
 
-window.addEventListener("mousemove", e => {
+window.addEventListener("mousemove", (e) => {
   // xTo(e.pageX);
   // yTo(e.pageY);
   xTo(e.clientX);
   yTo(e.clientY);
 });
 
-const box = document.querySelector('.magnetic');
+const box = document.querySelector(".magnetic");
 
 const enlargeCircle = () => {
-  gsap.to(circle, {duration: 0.3, scale: 2});
-}
+  gsap.to(circle, { duration: 0.3, scale: 2 });
+};
 
 const shrinkCircle = () => {
-  gsap.to(circle, {duration: 0.3, scale: 1});
-}
+  gsap.to(circle, { duration: 0.3, scale: 1 });
+};
 
 const moveCircle = (e) => {
-  gsap.to(circle, {duration: 0.3, x: e.clientX, y: e.clientY});
+  gsap.to(circle, { duration: 0.3, x: e.clientX, y: e.clientY });
   if (e.target === box) {
     enlargeCircle();
   } else {
     shrinkCircle();
   }
-}
+};
 
-box.addEventListener('mouseenter', enlargeCircle);
-box.addEventListener('mouseleave', shrinkCircle);
+box.addEventListener("mouseenter", enlargeCircle);
+box.addEventListener("mouseleave", shrinkCircle);
 
 // gsap.set(".mouse-circle", {xPercent: -50, yPercent: -50, scale: 1});
 
@@ -80,12 +79,12 @@ box.addEventListener('mouseleave', shrinkCircle);
 //================ScrollReveal=================//
 const sr = ScrollReveal({
   duration: 2000, //动画时长
-  distance: '50px', //移动距离
-  easing: 'ease-in-out', //缓动函数
-  origin: 'bottom', //元素起始位置
+  distance: "50px", //移动距离
+  easing: "ease-in-out", //缓动函数
+  origin: "bottom", //元素起始位置
 });
 
-sr.reveal(".animated",{
+sr.reveal(".animated", {
   interval: 200,
 });
 
@@ -180,10 +179,12 @@ form.addEventListener("submit", function (e) {
     .send("service_lnadkjc", "template_artemis_website", templateParams)
     .then(
       function (response) {
-        console.log("Success!");
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Your message has been sent!");
       },
       function (error) {
-        console.log(error);
+        console.log("FAILED...", error);
+        alert("Oops... " + JSON.stringify(error));
       }
     );
 });
